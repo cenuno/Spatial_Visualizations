@@ -1,6 +1,27 @@
 # Spatial_Visualizations
 Tips and tricks regarding spatial visualization.
 *****************
+## Call "Spatial Analysis of Points-in-Polygons" R script
+
+Copy and paste the following code to run the script from your R console. 
+```
+# run code from GitHub function
+source_github <- function( url ) {
+  # load package
+  require(RCurl)
+  
+  # read script lines from website and evaluate
+  script <- getURL(url, ssl.verifypeer = FALSE)
+  eval(parse(text = script), envir=.GlobalEnv)
+} 
+
+# Spatial Point and Polygon Analysis Raw URL
+raw_url <- "https://raw.githubusercontent.com/cenuno/Spatial_Visualizations/master/spatial_point_polygon_analysis.r"
+
+# run code from GitHub
+source_github( raw_url )
+
+```
 ## Import data from github function
 ```
 source_github <- function( url ) {
@@ -14,10 +35,6 @@ source_github <- function( url ) {
 ```
 *****************
 ## How to Import RDS files into RStudio
-
-Author:   Cristian Nuno
-Date:     May 30, 2017
-Purpose:  How to Import RDS files from GitHub into RStudio
 
 Step 1: ID a .rds file inside a GitHub repository (https://github.com/DataCapstone/Data-Capstone/tree/master/Drafts/ceuno)
 
