@@ -36,7 +36,7 @@ raw_url <- "https://raw.githubusercontent.com/cenuno/Spatial_Visualizations/mast
 source_github( raw_url )
 
 ```
-## Import data from github function
+## Run R Scripts from GitHub and Enable R Objects with 'source_github' function
 ```R
 source_github <- function( url ) {
   # load package
@@ -48,7 +48,7 @@ source_github <- function( url ) {
 } 
 ```
 *****************
-## How to Import RDS files into RStudio
+## Import RDS files into RStudio
 
 Step 1: ID a .rds file inside a GitHub repository (https://github.com/DataCapstone/Data-Capstone/tree/master/Drafts/ceuno)
 
