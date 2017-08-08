@@ -4,7 +4,21 @@ Tips and tricks regarding spatial visualization.
 ## Call "Spatial Analysis of Points-in-Polygons" R script
 
 Copy and paste the following code to run the script from your R console. 
-```
+```R
+# install necessary packages
+install.packages( c("dplyr", "splancs"
+                     , "rgdal", "magrittr"
+                     , "pander" 
+                     )
+                 )
+
+# import necessary packages
+library( dplyr ) # manipulate data frames
+library( splancs ) # conduct spatial point-in-polygon analysis
+library( rgdal ) # import GeoJSON files
+library( magrittr ) # use the %>% pipeline operator
+library( pander ) # make tables pretty in HTML
+
 # run code from GitHub function
 source_github <- function( url ) {
   # load package
@@ -23,7 +37,7 @@ source_github( raw_url )
 
 ```
 ## Import data from github function
-```
+```R
 source_github <- function( url ) {
   # load package
   require(RCurl)
@@ -46,13 +60,13 @@ Step 4: Click on "Copy Link Address" option from the menu
 
 Step 5: Paste the link address into a character vector
 
-```
+```R
 rds_url <- "https://github.com/DataCapstone/Data-Capstone/blob/master/Drafts/ceuno/chi_hou_philly_projectgrants_fy17.rds?
 ```
 
 Step 6: Nest the character vector into the following functions: 
 
-```
+```R
 rds.df <- readRDS( gzcon(url( rds_url ) ) )
 ```
 
