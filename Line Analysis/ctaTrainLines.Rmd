@@ -1,0 +1,61 @@
+---
+title: "Adding CTA 'L' Train Lines to a Map of Chicago"
+author: "Cristian E. Nuno"
+date: "8/10/2017"
+output: html_document
+---
+
+# Introduction
+
+I thought it would be fun to add CTA 'L' train lines to a map of the City of Chicago. This tutorial explains the process of unzipping .kmz files, importing .kml files using the `readOGR` function from the [`rgdal`](https://cran.r-project.org/web/packages/rgdal/index.html) package. 
+
+# The Trouble with KMZ Files
+
+```{r, message=FALSE}
+# import necessary packages
+library( rgdal )
+
+# save copied link as a character vector
+geojson_comarea_url <- "https://data.cityofchicago.org/api/geospatial/cauq-8yn6?method=export&format=GeoJSON"
+
+# transform vector into spatial dataframe
+comarea606 <- readOGR( dsn = geojson_comarea_url
+                       , layer = "OGRGeoJSON"
+                       , stringsAsFactors = FALSE
+)
+# clear margin white space
+par( mar = c(0, 0, 1, 0 ) )
+# plot community areas
+plot( comarea606
+      , main = "City of Chicago")
+```
+
+
+
+```{r}
+# save directory as character vector
+my_dir <- getwd()
+# Store zip URL from City of Chicago Data Portal
+# https://data.cityofchicago.org/Transportation/CTA-L-Rail-Lines-kml/sgbp-qafc
+ctaLines_url <- "https://data.cityofchicago.org/api/views/sgbp-qafc/files/ba7g7KSg7PPeVgu2XVzqHraXbeACpAQFV3p9WMjRKns?filename=CTA_RailLines.kmz"
+
+# change from .kmz to .zip using regular expression
+ctaLines_url <- sub( pattern = ".kmz$"
+                     , replacement = ".zip"
+                     , x = ctaLines_url
+                     )
+
+# download
+download.file( url = ctaLines_url
+               , destfile = "CTA_RailLines.zip"
+               )
+# unzip file
+unzip( "CTA_RailLines.zip")
+
+# read data
+plz <- readOGR( dsn = "/Users/cristiannuno/RStudio_All/doc.kml"
+                , stringsAsFactors = FALSE
+                )
+
+```
+
