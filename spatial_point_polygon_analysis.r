@@ -23,7 +23,7 @@ cps_sy1617 <- read.csv( file = cps_sy1617_url
 )
 
 # create placeholder variable for Community Area
-cps_sy1617$Community_Area <- "Replace Me"
+cps_sy1617$Community_Area <- NA
 
 # Source GitHub function
 source_github <- function( url ) {
