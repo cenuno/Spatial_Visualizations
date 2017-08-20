@@ -35,10 +35,10 @@ install.packages( c("dplyr", "splancs"
                  )
 
 # import necessary packages
-library( dplyr ) # manipulate data frames
-library( splancs ) # conduct spatial point-in-polygon analysis
-library( rgdal ) # import GeoJSON files
-library( magrittr ) # use the %>% pipeline operator
+# library( dplyr ) # manipulate data frames
+# library( splancs ) # conduct spatial point-in-polygon analysis
+# library( rgdal ) # import GeoJSON files
+# library( magrittr ) # use the %>% pipeline operator
 library( pander ) # make tables pretty in HTML
 
 # run code from GitHub function
@@ -52,7 +52,7 @@ source_github <- function( url ) {
 } 
 
 # Spatial Point and Polygon Analysis Raw URL
-raw_url <- "https://raw.githubusercontent.com/cenuno/Spatial_Visualizations/master/spatial_point_polygon_analysis.r"
+raw_url <- "https://raw.githubusercontent.com/cenuno/Spatial_Visualizations/master/Point-n-Polygon/spatial_point_polygon_analysis.r"
 
 # run code from GitHub
 source_github( raw_url )
