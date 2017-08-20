@@ -1,6 +1,28 @@
 # Spatial_Visualizations
-Tips and tricks regarding spatial visualization.
+
+Tutorials regarding spatial visualization and analysis.
+
 *****************
+
+## Mapping the CTA
+
+[![](https://github.com/cenuno/Spatial_Visualizations/raw/master/Images/MapCTA.png)](https://rpubs.com/cenuno/Mapping_CTA)
+
+[Tutorial](https://rpubs.com/cenuno/Mapping_CTA) on how to plot the Chicago Transportation Authority (CTA) 'L' Rail Line, Rail Stations, Bus Routes, and Bus Stops for the City of Chicago.
+******************
+# Point-n-Polygon
+
+[![](https://github.com/cenuno/Spatial_Visualizations/raw/master/Images/PointNPolygon.png)](https://rpubs.com/cenuno/spatial_analysis_pts_poly)
+
+What follows is a [tutorial](https://rpubs.com/cenuno/spatial_analysis_pts_poly) on the key spatial elements needed to understand how to identify points which reside in specific polygons.
+*******************
+
+## Querying USAspending API data from RStudio
+
+[![](https://github.com/cenuno/Spatial_Visualizations/raw/master/Images/QueryUSA.png)](https://rpubs.com/cenuno/USAspendingAPI)
+
+[USAspending API](https://api.usaspending.gov/) offers an interactive way for active citizens to query relevant federal spending data on a variety of fields. People can query data by geography, type of federal spending, CFDA program number, and much more. [Click here a tutorial](https://rpubs.com/cenuno/USAspendingAPI) on querying the data for FY17 Austin, Texas.
+
 ## Call "Spatial Analysis of Points-in-Polygons" R script
 
 Copy and paste the following code to run the script from your R console. 
