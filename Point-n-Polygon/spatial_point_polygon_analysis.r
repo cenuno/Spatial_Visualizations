@@ -23,7 +23,7 @@ cps_sy1617 <- read.csv( file = cps_sy1617_url
 )
 
 # create placeholder variable for Community Area
-cps_sy1617$Community_Area <- "Replace Me"
+cps_sy1617$Community_Area <- NA
 
 # Source GitHub function
 source_github <- function( url ) {
@@ -36,7 +36,7 @@ source_github <- function( url ) {
 } 
 
 # `get_poly_matrix_coord` function URL from GitHub
-gpmc_url <- "https://raw.githubusercontent.com/cenuno/Spatial_Visualizations/master/get_poly_matrix_coord.r"
+gpmc_url <- "https://raw.githubusercontent.com/cenuno/Spatial_Visualizations/master/Point-n-Polygon/get_poly_matrix_coord.r"
 
 # call the function
 source_github( gpmc_url )
@@ -49,7 +49,7 @@ com_area_polygons <- get_poly_matrix_coord( comarea606 ) # list of 77 matrices
 names( com_area_polygons ) <- comarea606$community
 
 # `get_CA_names` function URL from GitHub
-gCAnames_url <- "https://raw.githubusercontent.com/cenuno/Spatial_Visualizations/master/get_CA_names.r"
+gCAnames_url <- "https://raw.githubusercontent.com/cenuno/Spatial_Visualizations/master/Point-n-Polygon/get_CA_names.r"
 
 # call the function
 source_github( gCAnames_url )
