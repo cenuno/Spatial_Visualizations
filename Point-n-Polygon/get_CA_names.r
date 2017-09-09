@@ -71,4 +71,4 @@ get_CA_names <- function( a.data.frame
   # return a new data frame
   return( a.data.frame )
   
-} # end of get_CA function
+} # end of get_CA_names function
