@@ -10,8 +10,8 @@ get_CA_names <- function( a.data.frame
   require( splancs )
   require( dplyr )
   
-  # Ensure that the row.names of the `cps_sy1617`
-  # are ordered 1:nrow( cps_sy1617 )
+  # Ensure that the row.names of a.data.frame
+  # are ordered 1:nrow( a.data.frame )
   row.names( a.data.frame ) <- as.character( 1:nrow( a.data.frame ) )
   
   # Create 'Community_Area' variable inside the data frame
