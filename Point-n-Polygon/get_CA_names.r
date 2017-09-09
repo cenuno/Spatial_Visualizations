@@ -1,8 +1,10 @@
-# September 9, 2017
-# Points reside inside polygons.
-# This function assigns community area names
-# for points that reside in each polygon
-# assigns individual points the name of the polygon they reside in
+# 
+# Author:   Cristian E. Nuno
+# Date:     September 9, 2017
+# Purpose:  Create the get_CA_names function
+#           which assigns community area names
+#           for points that reside in each polygon
+
 get_CA_names <- function( a.data.frame
                           , a.list.of.matrices
                           , a.spatial.df ) {
