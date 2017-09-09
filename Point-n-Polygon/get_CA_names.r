@@ -1,13 +1,23 @@
-# August 15, 2017
+# September 9, 2017
 # Points reside inside polygons.
 # This function assigns community area names
 # for points that reside in each polygon
+# assigns individual points the name of the polygon they reside in
 get_CA_names <- function( a.data.frame
                           , a.list.of.matrices
                           , a.spatial.df ) {
   # ensure necessary packages are imported
   require( splancs )
   require( dplyr )
+  
+  # Ensure that the row.names of the `cps_sy1617`
+  # are ordered 1:nrow( cps_sy1617 )
+  row.names( a.data.frame ) <- as.character( 1:nrow( a.data.frame ) )
+  
+  # Create 'Community_Area' variable inside the data frame
+  # and assign it a value of NA
+  a.data.frame$Community_Area <- NA
+  
   # start your counter
   i <- 1
   
@@ -59,4 +69,4 @@ get_CA_names <- function( a.data.frame
   # return a new data frame
   return( a.data.frame )
   
-} # end of function
+} # end of get_CA function
