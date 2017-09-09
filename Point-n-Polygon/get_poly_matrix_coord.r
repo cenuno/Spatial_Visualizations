@@ -1,6 +1,9 @@
-# Create `get_poly_matrix_coord` function to 
-# access coordinate values within multiple polygons 
-# inside a spatial data frame.
+# 
+# Author:   Cristian E. Nuno
+# Date:     September 9, 2017
+# Purpose:  Create `get_poly_matrix_coord` function to 
+#           access coordinate values within multiple polygons 
+#           inside a spatial data frame.
 
 get_poly_matrix_coord <- function( spatial_poly_df ) {
   # start counter
