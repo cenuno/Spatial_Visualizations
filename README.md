@@ -12,9 +12,9 @@ Tutorials regarding spatial visualization and analysis.
 ******************
 # Point-n-Polygon
 
-[![](https://github.com/cenuno/Spatial_Visualizations/raw/master/Images/PointNPolygon.png)](https://rpubs.com/cenuno/spatial_analysis_pts_poly)
+[![](https://github.com/cenuno/Spatial_Visualizations/raw/master/Images/PointNPolygon.png)](http://rpubs.com/cenuno/ID_Points-in-Polygons)
 
-What follows is a [tutorial](https://rpubs.com/cenuno/spatial_analysis_pts_poly) on the key spatial elements needed to understand how to identify points which reside in specific polygons.
+What follows is a [tutorial](http://rpubs.com/cenuno/ID_Points-in-Polygons) on the key spatial elements needed to understand how to identify points which reside in specific polygons.
 *******************
 
 ## Querying USAspending API data from RStudio
@@ -23,41 +23,7 @@ What follows is a [tutorial](https://rpubs.com/cenuno/spatial_analysis_pts_poly)
 
 [USAspending API](https://api.usaspending.gov/) offers an interactive way for active citizens to query relevant federal spending data on a variety of fields. People can query data by geography, type of federal spending, CFDA program number, and much more. [Click here a tutorial](https://rpubs.com/cenuno/USAspendingAPI) on querying the data for FY17 Austin, Texas.
 
-## Call "Spatial Analysis of Points-in-Polygons" R script
 
-Copy and paste the following code to run the script from your R console. 
-```R
-# install necessary packages
-install.packages( c("dplyr", "splancs"
-                     , "rgdal", "magrittr"
-                     , "pander" 
-                     )
-                 )
-
-# import necessary packages
-# library( dplyr ) # manipulate data frames
-# library( splancs ) # conduct spatial point-in-polygon analysis
-# library( rgdal ) # import GeoJSON files
-# library( magrittr ) # use the %>% pipeline operator
-library( pander ) # make tables pretty in HTML
-
-# run code from GitHub function
-source_github <- function( url ) {
-  # load package
-  require(RCurl)
-  
-  # read script lines from website and evaluate
-  script <- getURL(url, ssl.verifypeer = FALSE)
-  eval(parse(text = script), envir=.GlobalEnv)
-} 
-
-# Spatial Point and Polygon Analysis Raw URL
-raw_url <- "https://raw.githubusercontent.com/cenuno/Spatial_Visualizations/master/Point-n-Polygon/spatial_point_polygon_analysis.r"
-
-# run code from GitHub
-source_github( raw_url )
-
-```
 ## Run R Scripts from GitHub and Enable R Objects with 'source_github' function
 ```R
 source_github <- function( url ) {
