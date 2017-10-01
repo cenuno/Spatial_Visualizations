@@ -4,7 +4,7 @@ Tutorials regarding spatial visualization and analysis.
 
 *****************
 
-## Mapping the CTA
+## Mapping the CTA "El" Train Stations
 
 [![](https://github.com/cenuno/Spatial_Visualizations/raw/master/Images/CTA_L_RailLines_Stations_2017-08-19.png)](https://rpubs.com/cenuno/Mapping_CTA)
 
@@ -12,7 +12,7 @@ Tutorials regarding spatial visualization and analysis.
 ******************
 # Point-n-Polygon
 
-[![](https://github.com/cenuno/Spatial_Visualizations/raw/master/Images/PointNPolygon.png)](http://rpubs.com/cenuno/ID_Points-in-Polygons)
+[![](https://github.com/cenuno/Spatial_Visualizations/raw/master/Images/ID_PointsNPolygon.png)](http://rpubs.com/cenuno/ID_Points-in-Polygons)
 
 What follows is a [tutorial](http://rpubs.com/cenuno/ID_Points-in-Polygons) on the key spatial elements needed to understand how to identify points which reside in specific polygons.
 *******************
